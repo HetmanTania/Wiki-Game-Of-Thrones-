@@ -7,6 +7,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -20,9 +28,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -47,6 +61,7 @@
       <option name="presentableId" value="Default" />
       <updated>1585646995784</updated>
       <workItem from="1585647010600" duration="16690000" />
+      <workItem from="1585988148659" duration="6269000" />
     </task>
     <servers />
   </component>
@@ -54,6 +69,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="-309" y="152" width="998" height="708" key="SettingsEditor" timestamp="1585988345490">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="-309" y="152" width="998" height="708" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1585988345490" />
     <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1585656424064">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
