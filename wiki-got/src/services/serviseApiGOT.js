@@ -1,4 +1,4 @@
-export  default class ApiGOTService {
+export default class ApiGOTService {
 
     constructor() {
         this.urlApi = "https://www.anapioficeandfire.com/api";
@@ -49,3 +49,5 @@ export  default class ApiGOTService {
         return character;
     }
 }
+
+
