@@ -2,14 +2,13 @@ export default class ApiGOTService {
 
     constructor() {
         this.urlApi = "https://www.anapioficeandfire.com/api";
-
     }
 
 
     async getData(url) {
         let res = await fetch(`${this.urlApi}${url}`);
         if (!res.ok) {
-            throw new Error(`Error in the function getData(), number error  ${res.status}`);
+            throw new Error(`Error in the function getData(), number error ${res.status}`);
         }
 
         return await res.json();
@@ -20,34 +19,68 @@ export default class ApiGOTService {
         let result = [];
         let indexPage = startPage;
         do {
-
             result = await this.getData(`/characters?page=${indexPage}&pageSize=40`);
             result.forEach((el) => {
-                if (el.tvSeries[0] !== "") {
-                    let idCharacter = el.url.match(/\d+$/);
-                    el.id = idCharacter[0];
-                    characters.push(el);
+                if (el.tvSeries[0] !== "" && el.name !== "") {
+                    characters.push(this.transformCheracter(el));
                 }
             });
             indexPage++;
         } while (result.length !== 0);
 
-        return characters;
+        return this.sortСharactersByName(characters);
     }
 
-    sortСharactersDySeason(character) {
-        let charecters = character;
+     sortСharactersByName(character) {
+        let charecters =  character;
         charecters.sort((el1, el2) => {
-            return el1.tvSeries.length < el2.tvSeries.length;
+            if (el1.name < el2.name)
+                return -1
+            if (el1.name > el2.name)
+                return 1
+            return 0
         });
-
+        return charecters;
     }
 
 
-    async getCheracter(id) {
-        let character =  await this.getData(`/characters/${id}`);
-        return character;
+    async getAPICheracter(id) {
+        let character = await this.getData(`/characters/${id}`);
+        return this.transformCheracter(character);
     }
+
+    transformCheracter(cheracter){
+        return {
+            id: this.returnId(cheracter.url),
+            name : cheracter.name,
+            gender : cheracter.gender,
+            culture : cheracter.culture,
+            born : cheracter.born,
+            died : cheracter.died,
+            aliases : cheracter.aliases
+        }
+    }
+
+    returnId(url){
+        let id = url.match(/\d+$/);
+        return id[0];
+    }
+
 }
 
 
+
+
+class SortData{
+    sortByName(data){
+        let sortData =  data;
+        sortData.sort((el1, el2) => {
+            if (el1.name < el2.name)
+                return -1
+            if (el1.name > el2.name)
+                return 1
+            return 0
+        });
+        return sortData;
+    }
+}
