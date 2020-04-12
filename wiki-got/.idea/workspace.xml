@@ -18,6 +18,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="master" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="HetmanTania" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="Wiki-Game-Of-Thrones-" />
+  </component>
   <component name="ProjectId" id="1Zt8Nsfw5JzHx37y97GqoYfcZ8s" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -71,7 +76,7 @@
       <workItem from="1586422855656" duration="13733000" />
       <workItem from="1586610667526" duration="15063000" />
       <workItem from="1586626460185" duration="4717000" />
-      <workItem from="1586677746721" duration="4236000" />
+      <workItem from="1586677746721" duration="5228000" />
     </task>
     <servers />
   </component>
@@ -79,6 +84,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="541" y="296" key="Github.CreatePullRequestDialog" timestamp="1586690553931">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="541" y="296" key="Github.CreatePullRequestDialog/0.0.1600.860@0.0.1600.860" timestamp="1586690553931" />
     <state x="-309" y="152" width="998" height="708" key="SettingsEditor" timestamp="1585988345490">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
