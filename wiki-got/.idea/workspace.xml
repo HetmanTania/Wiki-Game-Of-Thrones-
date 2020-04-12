@@ -38,6 +38,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WEB\React\Wiki-Game-Of-Thrones\wiki-got\src\components\Error" />
+    </key>
+  </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
       <list>
@@ -64,7 +69,9 @@
       <workItem from="1585988148659" duration="25740000" />
       <workItem from="1586185491636" duration="498000" />
       <workItem from="1586422855656" duration="13733000" />
-      <workItem from="1586610667526" duration="1235000" />
+      <workItem from="1586610667526" duration="15063000" />
+      <workItem from="1586626460185" duration="4717000" />
+      <workItem from="1586677746721" duration="4236000" />
     </task>
     <servers />
   </component>

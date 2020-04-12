@@ -1,0 +1,20 @@
+
+
+#error-div{
+    display: flex;
+    flex-flow: column;
+    margin: 0 auto;
+}
+
+
+.error-img-div{
+    width: 600px;
+}
+
+.error-img-div img{
+    width: 100%;
+}
+
+#error-header{
+    margin: 0 auto;
+}

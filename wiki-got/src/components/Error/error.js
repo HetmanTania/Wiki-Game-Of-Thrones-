@@ -1,14 +1,14 @@
 import React from "react";
 import "./error.css"
-
-export default class Error {
+import errorImg  from "./error.png"
+export default class Error extends React.Component{
     render() {
         return (
-            <div>
-                <div>
-                    <img src="src/img/imgonline-com-ua-Transparent-backgr-7jL7pRDGtRR9l9J.png"/>
+            <div id="error-div">
+                <div className="error-img-div">
+                 <img src={errorImg} alt="Error"/>
                 </div>
-                <h3>Opss... Error.</h3>
+                <h3 id="error-header">Opss... Error.</h3>
             </div>
         );
     }
