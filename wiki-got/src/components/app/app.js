@@ -13,17 +13,18 @@ import ApiGOTService from "../../services/serviseApiGOT";
 
 export default class App extends React.Component {
 
+    serviseGOT = new ApiGOTService();
+    state = {
+        characters: undefined,
+        selectedCharacter: undefined,
+        isLoad: true,
+        isError: false
+    };
 
-    constructor(props) {
-        super(props);
-        this.serviseGOT = new ApiGOTService();
-        this.state = {
-            characters: undefined,
-            isLoad: true,
-            isError: false
-        };
+    componentDidMount() {
         this.setStateCharacters();
     }
+
 
     onError = () => {
         this.setState({
@@ -32,21 +33,37 @@ export default class App extends React.Component {
         })
     }
 
+    onCharacterClick = (id) =>{
+        this.setState({
+            selectedCharacter: undefined
+        });
+        this.serviseGOT.getCharacter(+id).then((res)=>{
+            this.setState({
+                selectedCharacter: res
+            })
+        }).catch((e) =>{
+            this.onError();
+        })
+
+    }
+
+
+
+
     setStateCharacters() {
-        try {
-            this.serviseGOT.getCharacters().then((res) => {
-                let characters = this.serviseGOT.sortByName(res);
-                this.setState(() => {
-                    return {
-                        characters: characters,
-                        isLoad: false
-                    };
-                });
-            }).catch((e) => {
-                this.onError();
+
+        this.serviseGOT.getCharacters().then((res) => {
+            let characters = this.serviseGOT.sortByName(res);
+            this.setState(() => {
+                return {
+                    characters: characters,
+                    isLoad: false
+                };
             });
-        } catch (e) {
-        }
+        }).catch((e) => {
+            this.onError();
+        });
+
 
     }
 
@@ -59,10 +76,16 @@ export default class App extends React.Component {
             loaderOrItemList = <Loader/>
         } else {
             loaderOrItemList = <div className="col-md-6">
-                <ItemList characters={this.state.characters}/>
+                <ItemList listItem={this.state.characters} onItemSelected={this.onCharacterClick}/>
             </div>
         }
 
+        let characterDetails = undefined;
+        if(this.state.selectedCharacter !== undefined){
+            characterDetails =  <div className="col-md-6">
+                <PersonDetails cherecterSelected={this.state.selectedCharacter}/>
+            </div>
+        }
 
         return (
             <div className="container">
@@ -70,11 +93,8 @@ export default class App extends React.Component {
 
                     <HeaderApp/>
                     <main className="row">
-
                         {loaderOrItemList}
-                        {/*<div className="col-md-6">*/}
-                        {/*    <PersonDetails/>*/}
-                        {/*</div>*/}
+                        {characterDetails}
                     </main>
                 </div>
             </div>
