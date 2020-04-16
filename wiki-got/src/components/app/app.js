@@ -83,7 +83,7 @@ export default class App extends React.Component {
         let characterDetails = undefined;
         if(this.state.selectedCharacter !== undefined){
             characterDetails =  <div className="col-md-6">
-                <PersonDetails cherecterSelected={this.state.selectedCharacter}/>
+                <PersonDetails charecterSelected={this.state.selectedCharacter}/>
             </div>
         }
 

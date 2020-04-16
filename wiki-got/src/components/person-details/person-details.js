@@ -8,18 +8,22 @@ export default class PersonDetails extends React.Component {
     render() {
 
         let loaderOrDatails;
-        if(this.props.cherecterSelected === undefined){
+        if(this.props.charecterSelected === undefined){
             loaderOrDatails = <Loader/>
         }
         else {
 
-            let cherecterSelected = this.props.cherecterSelected;
+            let charecterSelected = this.props.charecterSelected;
+
+
+
+
             loaderOrDatails  =  <React.Fragment>
 
-                <h3 className="card-header">{cherecterSelected.name}</h3>
+                <h3 className="card-header">{charecterSelected.name}</h3>
                 <div className="card-body">
-                    <h5 className="card-title">{cherecterSelected.gender}</h5>
-                    <h6 className="card-subtitle text-muted">{cherecterSelected.culture}</h6>
+                    <h5 className="card-title">{charecterSelected.gender}</h5>
+                    <h6 className="card-subtitle text-muted">{charecterSelected.culture}</h6>
                 </div>
                 <div className="img-person-details">
                 </div>
@@ -27,11 +31,11 @@ export default class PersonDetails extends React.Component {
                 <div className="card-body">
                     <div className="data-born">
                         <p>Born: </p>
-                        <p className="card-text born-person">{cherecterSelected.born}</p>
+                        <p className="card-text born-person">{charecterSelected.born}</p>
                     </div>
                     <div className="data-died">
                         <p>Died: </p>
-                        <p className="card-text died-person">{cherecterSelected.died}</p>
+                        <p className="card-text died-person">{charecterSelected.died}</p>
                     </div>
 
                 </div>
