@@ -12,9 +12,10 @@ export default class ItemList extends React.Component {
 
         let listCharacters = undefined;
         if(this.props.listItem !== undefined) {
-            listCharacters = this.props.listItem .map((el) => {
+            listCharacters = this.props.listItem.map((el) => {
                 return (<tr className="table-primary">
                     <th onClick={() => this.props.onItemSelected(el.id)}>{el.name}</th>
+                    {/*<th onClick={() => this.props.onItemSelected(el.id)}>{el.name}</th>*/}
                 </tr>)
             });
         }

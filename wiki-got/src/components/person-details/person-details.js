@@ -8,12 +8,12 @@ export default class PersonDetails extends React.Component {
     render() {
 
         let loaderOrDatails;
-        if(this.props.charecterSelected === undefined){
+        if(this.props.characterSelected === undefined){
             loaderOrDatails = <Loader/>
         }
         else {
 
-            let charecterSelected = this.props.charecterSelected;
+            let charecterSelected = this.props.characterSelected;
 
 
 

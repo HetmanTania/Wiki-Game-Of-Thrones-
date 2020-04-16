@@ -5,6 +5,7 @@ import ItemList from "../item-list/item-list";
 import PersonDetails from "../person-details/person-details";
 import Loader from "../loader/loader";
 import Error from "../Error/error";
+import CharacterPage from "../character-page/character-page";
 import "./app.css"
 
 
@@ -33,22 +34,19 @@ export default class App extends React.Component {
         })
     }
 
-    onCharacterClick = (id) =>{
+    onCharacterClick = (id) => {
         this.setState({
             selectedCharacter: undefined
         });
-        this.serviseGOT.getCharacter(+id).then((res)=>{
+        this.serviseGOT.getCharacter(+id).then((res) => {
             this.setState({
                 selectedCharacter: res
             })
-        }).catch((e) =>{
+        }).catch((e) => {
             this.onError();
         })
 
     }
-
-
-
 
     setStateCharacters() {
 
@@ -63,29 +61,9 @@ export default class App extends React.Component {
         }).catch((e) => {
             this.onError();
         });
-
-
     }
 
     render() {
-
-        let loaderOrItemList;
-        if (this.state.isError) {
-            loaderOrItemList = <Error/>
-        } else if (this.state.isLoad) {
-            loaderOrItemList = <Loader/>
-        } else {
-            loaderOrItemList = <div className="col-md-6">
-                <ItemList listItem={this.state.characters} onItemSelected={this.onCharacterClick}/>
-            </div>
-        }
-
-        let characterDetails = undefined;
-        if(this.state.selectedCharacter !== undefined){
-            characterDetails =  <div className="col-md-6">
-                <PersonDetails charecterSelected={this.state.selectedCharacter}/>
-            </div>
-        }
 
         return (
             <div className="container">
@@ -93,8 +71,10 @@ export default class App extends React.Component {
 
                     <HeaderApp/>
                     <main className="row">
-                        {loaderOrItemList}
-                        {characterDetails}
+                        <CharacterPage itemList={this.state.characters}
+                                       pageState={{isLoad: this.state.isLoad, isError: this.state.isError}}
+                                       characterSelected={this.state.selectedCharacter}
+                                       onItemSelected={this.onCharacterClick}/>
                     </main>
                 </div>
             </div>
