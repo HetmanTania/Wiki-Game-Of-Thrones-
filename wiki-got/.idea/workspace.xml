@@ -41,7 +41,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -76,7 +76,12 @@
       <workItem from="1586422855656" duration="13733000" />
       <workItem from="1586610667526" duration="15063000" />
       <workItem from="1586626460185" duration="4717000" />
-      <workItem from="1586677746721" duration="5228000" />
+      <workItem from="1586677746721" duration="11239000" />
+      <workItem from="1586866824680" duration="4781000" />
+      <workItem from="1586886938164" duration="6390000" />
+      <workItem from="1586937981147" duration="4276000" />
+      <workItem from="1586958443746" duration="10297000" />
+      <workItem from="1587018483184" duration="1428000" />
     </task>
     <servers />
   </component>
@@ -88,13 +93,17 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="296" key="Github.CreatePullRequestDialog/0.0.1600.860@0.0.1600.860" timestamp="1586690553931" />
-    <state x="-309" y="152" width="998" height="708" key="SettingsEditor" timestamp="1585988345490">
+    <state x="245" y="85" width="998" height="708" key="SettingsEditor" timestamp="1586940639989">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="-309" y="152" width="998" height="708" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1585988345490" />
+    <state x="245" y="85" width="998" height="708" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1586940639989" />
     <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1585656424064">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585656424064" />
+    <state x="456" y="195" key="run.anything.popup" timestamp="1586694423120">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="456" y="195" key="run.anything.popup/0.0.1600.860@0.0.1600.860" timestamp="1586694423120" />
   </component>
 </project>

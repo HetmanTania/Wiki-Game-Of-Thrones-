@@ -5,17 +5,12 @@ export default class ApiGOTService {
         this.sortData = new SortData();
     }
 
-
-
-
-
      getCharacters(){
-        let a = this.sendRequestAPIGOT.getСharacters();
-          return a;
+        return this.sendRequestAPIGOT.getСharacters();
     }
 
-    getCheracter(id){
-        return this.sendRequestAPIGOT.getСharacter(id);
+    getCharacter(id){
+        return this.sendRequestAPIGOT.getCharacter(id);
     }
 
     sortByName(data){
@@ -52,21 +47,14 @@ class SendRequestAPIGOT {
         this.urlApi = "https://www.anapioficeandfire.com/api";
     }
 
-
-
     async getData(url) {
-        let res = await fetch(`${this.urlApi}${url}`);
-        if (!res.ok) {
-            throw new Error(`Error in the function getData(), number error ${res.status}`);
+        let resFetch = await fetch(`${this.urlApi}${url}`);
+        if (!resFetch.ok) {
+            throw new Error(`Error in the function getData(), number error ${resFetch.status}`);
         }
 
-
-        if(!res.length ||  !Object.keys(res).length){
-            throw new Error(`Data not found`);
-        }
-        return res;
+        return await resFetch.json();;
     }
-
 
     async getСharacters(startPage = 1, endPage = 214) {
         try {
@@ -74,16 +62,19 @@ class SendRequestAPIGOT {
             let result = [];
             let indexPage = startPage;
             do {
-                result = await this.getData(`/characters?page=6756456&pageSize=40`).then(() => {
+              await this.getData(`/characters?page=${indexPage}&pageSize=40`).then((res) => {
+                    result = res;
                     result.forEach((el) => {
-                        if (el.tvSeries[0] !== "" && el.name !== "") {
+                        if (el.tvSeries[0] !== "" && el.name !== ""){
                             characters.push(this.transformData.transformCheracter(el));
                         }
-                    });
+                    })
                     indexPage++;
                 }).catch((e) => {
                     throw e;
                 });
+
+
 
             } while (result.length !== 0);
 
@@ -96,7 +87,7 @@ class SendRequestAPIGOT {
         }
     }
 
-    async getAPICheracter(id) {
+    async getCharacter(id) {
         let character = await this.getData(`/characters/${id}`);
         return this.transformData.transformCheracter(character);
     }
