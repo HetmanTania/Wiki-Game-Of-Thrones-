@@ -14,8 +14,10 @@ export default class PersonDetails extends React.Component {
         else {
 
             let charecterSelected = this.props.characterSelected;
-
-
+            let aliases = this.props.characterSelected.aliases.map(
+                (el) => {
+                    return (<li className="list-group-item">{el}</li>)
+                });
 
 
             loaderOrDatails  =  <React.Fragment>
@@ -40,7 +42,7 @@ export default class PersonDetails extends React.Component {
 
                 </div>
                 <ul className="list-group list-group-flush list-aliases-person">
-
+                    {aliases}
                 </ul>
             </React.Fragment>
         }

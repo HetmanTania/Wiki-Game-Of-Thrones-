@@ -27,7 +27,6 @@ export default class CharacterPage extends React.Component{
         else {
             loaderOrItemList = <div className="col-md-6">
                 <ItemList listItem={this.props.itemList} onItemSelected={this.props.onItemSelected}/>
-                {/*<ItemList listItem={this.props.itemList} onItemSelected={this.props.onItemSelected}/>*/}
             </div>
         }
 
@@ -35,7 +34,6 @@ export default class CharacterPage extends React.Component{
         if (this.props.characterSelected !== undefined) {
             characterDetails = <div className="col-md-6">
                 <PersonDetails characterSelected={this.props.characterSelected}/>
-                {/*<PersonDetails characterSelected={this.props.characterSelected}/>*/}
             </div>
         }
 
