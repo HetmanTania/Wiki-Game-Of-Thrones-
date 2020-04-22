@@ -2,7 +2,7 @@ import React from "react";
 
 import HeaderApp from "../header/header";
 import ItemList from "../item-list/item-list";
-import PersonDetails from "../person-details/person-details";
+import ItemDetails from "../person-details/item-details";
 import Loader from "../loader/loader";
 import Error from "../Error/error";
 import CharacterPage from "../character-page/character-page";

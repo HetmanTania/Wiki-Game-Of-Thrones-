@@ -10,8 +10,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -41,11 +41,12 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="ts.external.directory.path" value="D:\Programm\WebStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\WEB\React\Wiki-Game-Of-Thrones\wiki-got\src\components\person-details" />
       <recent name="D:\WEB\React\Wiki-Game-Of-Thrones\wiki-got\src\components\Error" />
     </key>
   </component>
@@ -86,6 +87,8 @@
       <workItem from="1587397373513" duration="776000" />
       <workItem from="1587398487576" duration="1635000" />
       <workItem from="1587461680135" duration="1116000" />
+      <workItem from="1587536135827" duration="3110000" />
+      <workItem from="1587542800366" duration="3049000" />
     </task>
     <servers />
   </component>
@@ -93,18 +96,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="557" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587536345049">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="557" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1587536345049" />
     <state x="541" y="296" key="Github.CreatePullRequestDialog" timestamp="1586690553931">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="541" y="296" key="Github.CreatePullRequestDialog/0.0.1600.860@0.0.1600.860" timestamp="1586690553931" />
-    <state x="245" y="85" width="998" height="708" key="SettingsEditor" timestamp="1586940639989">
+    <state x="245" y="85" width="998" height="708" key="SettingsEditor" timestamp="1587543072201">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="245" y="85" width="998" height="708" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1586940639989" />
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1585656424064">
+    <state x="245" y="85" width="998" height="708" key="SettingsEditor/0.0.1600.860@0.0.1600.860" timestamp="1587543072201" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2" timestamp="1587542566510">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1585656424064" />
+    <state x="392" y="162" key="Vcs.Push.Dialog.v2/0.0.1600.860@0.0.1600.860" timestamp="1587542566510" />
     <state x="456" y="195" key="run.anything.popup" timestamp="1587025211955">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

@@ -4,15 +4,18 @@ import "./item-list.css"
 import "../loader/loader"
 import ApiGOTService from "../../services/serviseApiGOT";
 
-export default class ItemList extends React.Component {
 
+
+
+
+export default class ItemList extends React.Component {
 
 
     render() {
 
-        let listCharacters = undefined;
+        let listItems = undefined;
         if(this.props.listItem !== undefined) {
-            listCharacters = this.props.listItem.map((el) => {
+            listItems = this.props.listItem.map((el) => {
                 return (<tr className="table-primary">
                     <th onClick={() => this.props.onItemSelected(el.id)}>{el.name}</th>
                 </tr>)
@@ -23,7 +26,7 @@ export default class ItemList extends React.Component {
             <div>
                 <table className="table table-hover">
                     <tbody>
-                        {listCharacters}
+                        {listItems}
                     </tbody>
                 </table>
             </div>
