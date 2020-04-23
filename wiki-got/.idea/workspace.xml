@@ -88,7 +88,9 @@
       <workItem from="1587398487576" duration="1635000" />
       <workItem from="1587461680135" duration="1116000" />
       <workItem from="1587536135827" duration="3110000" />
-      <workItem from="1587542800366" duration="3049000" />
+      <workItem from="1587542800366" duration="3833000" />
+      <workItem from="1587575835917" duration="4985000" />
+      <workItem from="1587625262023" duration="2483000" />
     </task>
     <servers />
   </component>
@@ -96,10 +98,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="557" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587536345049">
+    <state x="557" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1587580226142">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="557" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1587536345049" />
+    <state x="557" y="232" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1600.860@0.0.1600.860" timestamp="1587580226142" />
     <state x="541" y="296" key="Github.CreatePullRequestDialog" timestamp="1586690553931">
       <screen x="0" y="0" width="1600" height="860" />
     </state>

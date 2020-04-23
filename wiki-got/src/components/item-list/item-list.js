@@ -2,15 +2,9 @@ import React from "react";
 
 import "./item-list.css"
 import "../loader/loader"
-import ApiGOTService from "../../services/serviseApiGOT";
-
-
-
 
 
 export default class ItemList extends React.Component {
-
-
     render() {
 
         let listItems = undefined;
