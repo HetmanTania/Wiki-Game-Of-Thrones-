@@ -41,21 +41,33 @@ export default class CharacterDetails extends React.Component{
             }
 
             characterDetails =
-                <div className="col-md-6">
-                    <ItemDetails itemSelected={characterSelected}>
-                        <DataItem>
-                            <h5 className="card-title">{characterSelected.gender}</h5>
-                            <h6 className="card-subtitle text-muted">{characterSelected.culture}</h6>
-                        </DataItem>
-                        <DataItem>
-                            <div className="img-person-details"></div>
-                        </DataItem>
-                        <DataItem>
-                            {born}
-                            {died}
-                        </DataItem>
-                        {ulAliases}
-                    </ItemDetails>
+                <div className="person-details card ">
+                    <DataItem>
+                        <h5 className="card-title">{characterSelected.gender}</h5>
+                        <h6 className="card-subtitle text-muted">{characterSelected.culture}</h6>
+                    </DataItem>
+                    <DataItem>
+                        <div className="img-person-details"></div>
+                    </DataItem>
+                    <DataItem>
+                        {born}
+                        {died}
+                    </DataItem>
+                    {ulAliases}
+                    {/*<ItemDetails itemSelected={characterSelected}>*/}
+                    {/*    <DataItem>*/}
+                    {/*        <h5 className="card-title">{characterSelected.gender}</h5>*/}
+                    {/*        <h6 className="card-subtitle text-muted">{characterSelected.culture}</h6>*/}
+                    {/*    </DataItem>*/}
+                    {/*    <DataItem>*/}
+                    {/*        <div className="img-person-details"></div>*/}
+                    {/*    </DataItem>*/}
+                    {/*    <DataItem>*/}
+                    {/*        {born}*/}
+                    {/*        {died}*/}
+                    {/*    </DataItem>*/}
+                    {/*    {ulAliases}*/}
+                    {/*</ItemDetails>*/}
                 </div>
 
             return characterDetails;

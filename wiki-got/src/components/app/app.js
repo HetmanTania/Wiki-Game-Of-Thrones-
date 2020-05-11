@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderApp from "../header/header";
 import CharacterPage from "../character-page/character-page";
+import Page from "../page/page";
 import "./app.css"
 
 
@@ -12,7 +13,7 @@ export default class App extends React.Component {
     serviseGOT = new ApiGOTService();
     state = {
         characters: undefined,
-        selectedCharacter: undefined,
+        selectedItem: undefined,
         isLoad: true,
         isError: false
     };
@@ -30,11 +31,11 @@ export default class App extends React.Component {
 
     onCharacterClick = (id) => {
         this.setState({
-            selectedCharacter: undefined
+            selectedItem: undefined
         });
         this.serviseGOT.getCharacter(+id).then((res) => {
             this.setState({
-                selectedCharacter: res
+                selectedItem: res
             })
         }).catch((e) => {
             this.onError();
@@ -43,7 +44,6 @@ export default class App extends React.Component {
     }
 
     setStateCharacters() {
-
         this.serviseGOT.getCharacters().then((res) => {
             let characters = this.serviseGOT.sortByName(res);
             this.setState(() => {
@@ -63,10 +63,14 @@ export default class App extends React.Component {
                 <div>
                     <HeaderApp/>
                     <main className="row">
-                        <CharacterPage itemList={this.state.characters}
-                                       pageState={{isLoad: this.state.isLoad, isError: this.state.isError}}
-                                       characterSelected={this.state.selectedCharacter}
-                                       onItemSelected={this.onCharacterClick}/>
+                        <Page itemList={this.state.characters}
+                              pageState={{isLoad: this.state.isLoad, isError: this.state.isError}}
+                              selectedItem={this.state.selectedItem}
+                              onItemSelected={this.onCharacterClick}/>
+                        {/*<CharacterPage itemList={this.state.characters}*/}
+                        {/*               pageState={{isLoad: this.state.isLoad, isError: this.state.isError}}*/}
+                        {/*               characterSelected={this.state.selectedCharacter}*/}
+                        {/*               onItemSelected={this.onCharacterClick}/>*/}
                     </main>
                 </div>
             </div>

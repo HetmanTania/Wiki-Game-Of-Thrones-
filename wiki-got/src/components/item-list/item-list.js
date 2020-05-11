@@ -6,7 +6,6 @@ import "../loader/loader"
 
 export default class ItemList extends React.Component {
     render() {
-
         let listItems = undefined;
         if(this.props.listItem !== undefined) {
             listItems = this.props.listItem.map((el) => {

@@ -21,18 +21,20 @@ export default class Pagination extends React.Component {
         let classPage = "page-item";
         if (pages < 5) {
             for (let i = 1; i <= pages; i++) {
+                let activeClass = "";
                 if ((i === this.state.currentPage)) {
-                    classPage += " active"
+                    activeClass += " active"
                 }
-                this.pushArr(arr, i, classPage, i);
+                this.pushArr(arr, i, classPage + activeClass, i);
             }
         } else if (pages > 5 && this.state.currentPage <= 3) {
             let i = 1;
             for (; i <= 3; i++) {
+                let activeClass = "";
                 if ((i === this.state.currentPage)) {
-                    classPage += " active"
+                    activeClass += " active"
                 }
-                this.pushArr(arr, i, classPage, i);
+                this.pushArr(arr, i, classPage + activeClass, i);
             }
             this.pushArr(arr, i, classPage, "...");
             this.pushArr(arr, pages, classPage, pages);
@@ -42,7 +44,7 @@ export default class Pagination extends React.Component {
             this.pushArr(arr,1,classPage,1);
             this.pushArr(arr, 2, classPage, "...");
             this.pushArr(arr, this.state.currentPage - 1, classPage, this.state.currentPage - 1);
-            this.pushArr(arr, this.state.currentPage, classPage, this.state.currentPage );
+            this.pushArr(arr, this.state.currentPage, classPage + " active", this.state.currentPage );
             this.pushArr(arr, this.state.currentPage + 1, classPage, this.state.currentPage + 1);
 
             this.pushArr(arr, this.state.currentPage + 2, classPage, "...");
@@ -55,7 +57,11 @@ export default class Pagination extends React.Component {
             this.pushArr(arr, 2, classPage, "...");
 
             for(let i = pages - 3; i <= pages; i++){
-                this.pushArr(arr, i, classPage, i);
+                let activeClass = "";
+                if ((i === this.state.currentPage)) {
+                    activeClass += " active"
+                }
+                this.pushArr(arr, i, classPage + activeClass, i);
             }
         }
         return arr;

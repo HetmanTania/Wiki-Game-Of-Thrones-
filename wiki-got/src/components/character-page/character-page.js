@@ -71,3 +71,6 @@ export default class CharacterPage extends React.Component {
         );
     }
 }
+
+
+
