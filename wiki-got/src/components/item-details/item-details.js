@@ -9,22 +9,16 @@ export default class ItemDetails extends React.Component {
     render() {
 
         let loaderOrDatails;
-        if (this.props.itemSelected === undefined) {
+        if (this.props.isSelected === true) {
             loaderOrDatails = <Loader/>
         } else {
-            let itemSelected = this.props.itemSelected;
-            loaderOrDatails =
-                <React.Fragment>
-                    <h3 className="card-header">{itemSelected.name}</h3>
-                    {this.props.children}
-                </React.Fragment>
+            loaderOrDatails = this.props.children;
         }
         return (
-            <div>
-                <div className="person-details card mb-3">
+
+            <div className="col-md-6 mb-3">
                     {loaderOrDatails}
-                </div>
-            </div>
+             </div>
         );
     }
 }

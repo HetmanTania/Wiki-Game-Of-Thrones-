@@ -56,6 +56,7 @@ class SendRequestAPIGOT {
         return await resFetch.json();;
     }
 
+
     async getСharacters(startPage = 1, endPage = 214) {
         try {
             let characters = [];
